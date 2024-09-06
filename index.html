@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Borders and backgrounds */
+        .form-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        /* Red error message */
+        .error-message {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #f5c6cb;
+        }
+
+        /* Credit card icons */
+        .credit-cards {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: #e9ecef;
+        }
+
+        .credit-cards img {
+            margin-right: 10px;
+        }
+
+        /* Payment Form Example header */
+        .form-header {
+            background-color: #e9ecef;
+            padding: 5px;
+            border-radius: 5px 5px 0 0;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+
+        <!-- Header section -->
+        <div class="form-header">
+            Payment Form Example
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-message">
+            Some fields are missing
+        </div>
+
+        <!-- Form with square borders and background -->
+        <div class="form-container">
+            <form class="row g-3">
+
+                <!-- Card Number -->
+                <div class="col-md-6 form-group">
+                    <label for="cardNumber" class="form-label">Card #</label>
+                    <input type="text" class="form-control" id="cardNumber" placeholder="XXXXXXXXXXXXXXXX">
+                </div>
+
+                <!-- CVC -->
+                <div class="col-md-3 form-group">
+                    <label for="cvc" class="form-label">CVC #</label>
+                    <input type="text" class="form-control" id="cvc" placeholder="0000">
+                </div>
+
+                <!-- Amount -->
+                <div class="col-md-3 form-group">
+                    <label for="amount" class="form-label">Amount</label>
+                    <input type="text" class="form-control" id="amount" placeholder="$ Amount">
+                </div>
+
+                <!-- First Name -->
+                <div class="col-md-6 form-group">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName">
+                </div>
+
+                <!-- Last Name -->
+                <div class="col-md-6 form-group">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName">
+                </div>
+
+                <!-- City -->
+                <div class="col-md-6 form-group">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" class="form-control" id="city">
+                </div>
+
+                <!-- State -->
+                <div class="col-md-3 form-group">
+                    <label for="state" class="form-label">State</label>
+                    <select class="form-select" id="state">
+                        <option selected disabled value="">Pick a state</option>
+                        <option>New York</option>
+                        <option>California</option>
+                        <option>Texas</option>
+                    </select>
+                </div>
+
+                <!-- Postal Code -->
+                <div class="col-md-3 form-group">
+                    <label for="postalCode" class="form-label">Postal Code</label>
+                    <input type="text" class="form-control" id="postalCode" placeholder="XXXXX">
+                </div>
+
+                <!-- Message -->
+                <div class="col-md-12 form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Add any notes here."></textarea>
+                </div>
+
+                <!-- Credit Cards Section -->
+                <div class="col-md-12 form-group">
+                    <label>We accept:</label>
+                    <div class="credit-cards">
+                        <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa">
+                        <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" alt="MasterCard">
+                        <img src="https://img.icons8.com/color/48/000000/amex.png" alt="Amex">
+                        <img src="https://img.icons8.com/color/48/000000/discover.png" alt="Discover">
+                    </div>
+                </div>
+
+                <!-- Submit and Cancel buttons -->
+                <div class="col-12">
+                    <button class="btn btn-secondary" type="reset">Cancel</button>
+                    <button class="btn btn-primary" type="submit">Send</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
